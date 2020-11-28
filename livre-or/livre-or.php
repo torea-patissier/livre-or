@@ -33,7 +33,7 @@ $all = mysqli_fetch_all($query, MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../lecss/index.css" rel="stylesheet">
+    <link href="../lecss/livreor.css" rel="stylesheet">
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <title>Livre d'or</title>
 </head>
@@ -41,17 +41,47 @@ $all = mysqli_fetch_all($query, MYSQLI_ASSOC);
 <body>
 
     <main>
+        <div class="imgheader">
+            <img src="../images/spotifyy.png" alt="presentationspotify">
+        </div>
         <form action="livre-or.php" method="post">
-            <a href="../commentaire/commentaire.php"><input class="submit" type="submit" name="coms" value="Poster un commentaire"> </a>
+            <a class="buttonalone" href="../commentaire/commentaire.php"><input class="submit" type="submit" name="coms" value="Poster un commentaire"> </a>
         </form>
-        <?php
-        foreach ($all as $key) {
-            echo '<section class = "tableaucommentaire">' . '<h5>' . 'Posté le ' . $key['date'] . ' par '  . $key['login'] . ':<br/>' . $key['commentaire'] . '<br/></h5>' . '</section>';
-        } // FONCTION POUR AFFICHER LES COMMENTAIRES D'UNE BASE DE DONNEE        
-        ?>
-
+        <div class="tablivreor">
+            <?php
+            foreach ($all as $key) {
+                echo '<section class = "tableaucommentaire">' . '<h5>' . 'Posté le ' . $key['date'] . ' par '  . $key['login'] . ':<br/>' . $key['commentaire'] . '<br/></h5>' . '</section>';
+            } // FONCTION POUR AFFICHER LES COMMENTAIRES D'UNE BASE DE DONNEE        
+            ?>
+        </div>
     </main>
     <footer>
+
+        <div class="réseaux">
+            <p><b>Retrouvez nous sur:</b></p>
+        </div>
+
+        <div id="réseauxspotify">
+
+            <div class="facebook">
+                <a target="_blank" href="https://www.facebook.com/Spotify.France">
+                    <img src="../images/facebook.png" alt="facebookspotify"></a>
+            </div>
+
+            <div class="instagram">
+
+                <a target="_blank" href="https://www.instagram.com/spotify/?hl=fr">
+                    <img src="../images/instagram.png" alt="instagramspotify"></a>
+            </div>
+
+            <div class="twitter">
+
+                <a target="_blank" href="https://twitter.com/spotifyfrance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <img src="../images/twitter.png" alt="twitterspotify"></a>
+            </div>
+
+        </div>
+
     </footer>
 </body>
 

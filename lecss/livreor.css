@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;    
+    background-color: #67D861;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    height: 90px;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+nav a{
+    margin: 2%;
+    font-size: xx-large;
+}
+
+nav a:hover{
+    color:#67D861;
+
+}
+/* NAVBAR */
+
+
+.tablivreor{
+margin-left: 30%;    
+}
+
+h5{
+    border-style: solid;
+    margin-right: 50%;
+}
+.imgheader{
+    display: flex;
+    justify-content: center;
+}
+
+#getitimg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.spotaccueil{
+    display: flex;
+    justify-content: center;
+}
+
+.submit{
+    width: 6cm;
+    height: 1.2cm;
+    border-radius: 10px;
+    margin-top: 2cm;
+    font-size: large;
+    color: whitesmoke;
+    background-color:black;
+    border-radius: 1rem;
+
+}
+.submit:hover{
+    transform: scale(1.2);
+}
+
+
+
+/* ACCUEIL */
+
+#blocspot1, #blocspot3 {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+    margin-right: 3cm;
+
+}
+
+.textspot1, .textspot3 {
+    margin-right: 1cm;
+    margin-top: 5cm;
+}
+
+.textspot2, .textspot4 {
+    margin-left: 1cm;
+    margin-top: 5cm;
+}
+
+#blocspot2, #blocspot4 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3cm;
+}
+/* ACCUEIL */
+
+.formulaire{
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    margin: 0 35%;
+    padding: 4% 0;
+    margin-top: 4%;
+    box-shadow: 5px 5px 5px black;
+}
+
+.buttonalone{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+
+input[type="text"],input[type="password"]
+{
+    width: 6cm;
+    height: 1.2cm;
+    border-radius: 10px;
+    font-size: large;    
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.msgprofil{
+    display: flex;
+    justify-content: center;
+}
+
+#réseauxspotify {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.réseaux {
+text-align: center;
+font-size: larger;
+}
+
+.facebook {
+    margin-right: 1cm;
+}
+
+.twitter {
+    margin-left: 1cm;
+}
+
+
