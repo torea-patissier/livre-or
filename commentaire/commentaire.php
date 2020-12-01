@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$db = mysqli_connect("localhost", "root", "root", "livreor"); // Go to Db
+$db = mysqli_connect("localhost", "root", "", "livreor"); // Go to Db
 $requete = "SELECT * FROM utilisateurs WHERE id = '" . $_SESSION['id'] . "'"; // Selectionner l'id en cours d'utilisation (prepar command)
 $query = mysqli_query($db, $requete); //  execute la commande
 $users = mysqli_fetch_assoc($query); // Took 1line from Db 
@@ -94,10 +94,10 @@ if (isset($_POST['envoyer'])) { // Si on appuie sur envoyer
     if (empty($_POST['coms'])) { // Si  la zone de commentaire est vide
         exit('Zone de texte vide'); // Afficher:
     } else { // Sinon
-        $db = mysqli_connect("localhost", "root", "root", "livreor"); // Go to db 
+        $db = mysqli_connect("localhost", "root", "", "livreor"); // Go to db 
         $connect =  "INSERT INTO commentaires(commentaire, id_utilisateur, date) VALUES ('$commentaire', '$id', '$horaire') "; // Prepar command
         $query = mysqli_query($db, $connect); // Execut command
-        header('location: http://localhost:8888/livre-or/livre-or/livre-or.php'); // Header to
+        header('location: http://localhost/livre-or/livre-or/livre-or.php'); // Header to
     }
 }
 

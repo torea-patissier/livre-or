@@ -20,7 +20,7 @@ if (isset($_SESSION['id']) and 'id' == TRUE) {
 </header>';
 }
 
-$db = mysqli_connect("localhost", "root", "root", "livreor"); // Connnexion à MySQL
+$db = mysqli_connect("localhost", "root", "", "livreor"); // Connnexion à MySQL
 $requete = "SELECT date, login, commentaire  FROM commentaires INNER JOIN utilisateurs ON commentaires.id_utilisateur = utilisateurs.id ORDER BY date DESC";
 $query = mysqli_query($db, $requete); // Lier La connexion, avec la requête
 $all = mysqli_fetch_all($query, MYSQLI_ASSOC);
@@ -93,9 +93,9 @@ sinon, redirection vers inscription  -->
 
 if (isset($_POST['coms'])) {
     if (isset($_SESSION['id']) and 'id' == TRUE) {
-        header('location:http://localhost:8888/livre-or/commentaire/commentaire.php');
+        header('location:http://localhost/livre-or/commentaire/commentaire.php');
     } else {
-        header('location:http://localhost:8888/livre-or/connexion/connexion.php');
+        header('location:http://localhost/livre-or/connexion/connexion.php');
     }
 }
 

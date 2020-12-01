@@ -27,7 +27,7 @@ session_start();
     </header>
 
     <main>
-        <a class="buttonalone" href="http://localhost:8888/livre-or/inscription/inscription.php">
+        <a class="buttonalone" href="http://localhost/livre-or/inscription/inscription.php">
             <input class="submit" type="submit" name='inscritpion' value="S'inscrire">
         </a>
         <div class="formulaire">
@@ -46,14 +46,14 @@ session_start();
         $username = $_POST['login']; // $ = Login of the session
         $pwd = $_POST['password']; // $ = Pwd of the session
 
-        $db = mysqli_connect("localhost", "root", "root", "livreor"); // Connect to Db
+        $db = mysqli_connect("localhost", "root", "", "livreor"); // Connect to Db
         $requete = " SELECT * FROM utilisateurs WHERE login = '$username' AND password = '$pwd' "; // Prepare the command
         $query = mysqli_query($db, $requete); // Execut the command in the Db
         $user = mysqli_fetch_assoc($query); // Took 1 line in the Db 
 
         if (isset($user)) { // If the user is online
             $_SESSION['id'] = $user['id'];
-            header('Location:http://localhost:8888/livre-or/profil/profil.php');
+            header('Location:http://localhost/livre-or/profil/profil.php');
         } else {
             echo '<p class="msgprofil"> Identifiant ou mot de passe incorrecte</p>';
         }

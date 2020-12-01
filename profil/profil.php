@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$db = mysqli_connect("localhost", "root", "root", "livreor"); // Connect to Db
+$db = mysqli_connect("localhost", "root", "", "livreor"); // Connect to Db
 $requete = "SELECT * FROM utilisateurs WHERE id = '" . $_SESSION['id'] . "'"; // SQL query
 $query = mysqli_query($db, $requete); // Execut the query
 $user = mysqli_fetch_assoc($query); //Took 1line from the Db
@@ -94,13 +94,13 @@ if (isset($_POST["modifier"])) {
     } else {
         $requete2 = "UPDATE utilisateurs SET login='$login', password='$password' WHERE id = '" . $_SESSION['id'] . "' "; // Important to put $ between '' and not " "
         $query = mysqli_query($db, $requete2);
-        header('location:http://localhost:8888/livre-or/profil/profil.php');
+        header('location:http://localhost/livre-or/profil/profil.php');
     }
 }
 
 if (isset($_POST['deco'])) {
     session_destroy();
-    header('location:http://localhost:8888/livre-or/index/index.php');
+    header('location:http://localhost/livre-or/index/index.php');
 }
 
 ?>

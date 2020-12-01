@@ -67,7 +67,7 @@
 
 <?php
 
-$db = mysqli_connect("localhost", "root", "root", "livreor"); //Connexion Db
+$db = mysqli_connect("localhost", "root", "", "livreor"); //Connexion Db
 if (isset($_POST["envoyer"])) {
     $login = $_POST['login'];
     $password = $_POST['password'];
@@ -81,7 +81,7 @@ if (isset($_POST["envoyer"])) {
         $requete = "INSERT INTO utilisateurs(login, password) VALUES ('$login','$password')"; // On ajoute le nouvel utilisateurs en Db
         $query = mysqli_query($db, $requete); // Executer la requête
         $_SESSION['id'] = $_POST['id']; // Ouverture de session
-        header('Location:http://localhost:8888/livre-or/connexion/connexion.php'); //Redirection vers connexion
+        header('Location:http://localhost/livre-or/connexion/connexion.php'); //Redirection vers connexion
     }
 }
 
